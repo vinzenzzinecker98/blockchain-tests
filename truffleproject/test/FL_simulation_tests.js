@@ -1,10 +1,10 @@
 const FL_simulation = artifacts.require("FL_simulation");
 
 contract('FL_simulation', (accounts) => {
-    
+
   it('should display initial weights', async () => {
     const FLInstance = await FL_simulation.deployed();
-    const w = await FLInstance.getweights.toNumber();
+    const w = await FLInstance.getweights();
 
     assert.equal(w.valueOf(), 0, "initial value was not 0");
   });
