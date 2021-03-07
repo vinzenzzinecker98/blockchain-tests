@@ -25,6 +25,7 @@ contract FL_simulation {
                 data:_data
             }
         );
+        return true;
 	}
 
 	function getweights() public view returns(uint){
