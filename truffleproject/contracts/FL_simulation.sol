@@ -14,6 +14,7 @@ contract FL_simulation {
     uint public ID_newestweights;
     
     Weights[] public allweights;
+    
 
 
 	function updateweights(uint _data) public returns(bool sufficient) {
