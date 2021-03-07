@@ -1,5 +1,5 @@
 
-pragma solidity >=0.4.17 <0.7.0;
+pragma solidity >=0.7.0 <0.8.0;
 
 
 
@@ -14,7 +14,9 @@ contract FL_simulation {
     uint public ID_newestweights;
     
     Weights[] public allweights;
-    
+    constructor() {
+        ID_newestweights=1;
+    }
 
 
 	function updateweights(uint _data) public returns(bool sufficient) {

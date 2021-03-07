@@ -2,7 +2,11 @@
   "contractName": "FL_simulation",
   "abi": [
     {
-      "constant": true,
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
       "inputs": [],
       "name": "ID_newestweights",
       "outputs": [
@@ -12,12 +16,10 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
       "type": "function"
     },
     {
-      "constant": true,
       "inputs": [
         {
           "internalType": "uint256",
@@ -43,12 +45,10 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
       "type": "function"
     },
     {
-      "constant": false,
       "inputs": [
         {
           "internalType": "uint256",
@@ -64,12 +64,10 @@
           "type": "bool"
         }
       ],
-      "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     },
     {
-      "constant": true,
       "inputs": [],
       "name": "getweights",
       "outputs": [
@@ -79,26 +77,28 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ID_newestweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"ID\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"initiator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"data\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_data\",\"type\":\"uint256\"}],\"name\":\"updateweights\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"sufficient\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":\"FL_simulation\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":{\"keccak256\":\"0x75a88a5c5ae6826e451a221e5eda4ad5e89d6c88c6e1b560fefa1cdf91fa0113\",\"urls\":[\"bzz-raw://b089ede5c3f7533dd702a806ef11dc869ee69214e079dcf760892c4221fd5510\",\"dweb:/ipfs/QmXusa8YoTZHrLhJkFnwfnGFwwT9jg2fJvspB4FV1PBEJR\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506102ce806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806306779ab514610051578063187587131461006f5780631922b23d1461008d5780632b81704e146100d3575b600080fd5b61005961014f565b6040518082815260200191505060405180910390f35b610077610177565b6040518082815260200191505060405180910390f35b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061017d565b604051808215151515815260200191505060405180910390f35b6100ff600480360360208110156100e957600080fd5b8101908080359060200190929190505050610242565b604051808481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390f35b600060016000548154811061016057fe5b906000526020600020906003020160020154905090565b60005481565b6000600160005401600081905550604051806060016040528060005481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152506001600054815481106101cd57fe5b90600052602060002090600302016000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015590505060019050919050565b6001818154811061024f57fe5b90600052602060002090600302016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002015490508356fea265627a7a72315820535138e99fa121d539be21c1016d358175e58d2d8125e0e86541b11a893818aa64736f6c634300050c0032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806306779ab514610051578063187587131461006f5780631922b23d1461008d5780632b81704e146100d3575b600080fd5b61005961014f565b6040518082815260200191505060405180910390f35b610077610177565b6040518082815260200191505060405180910390f35b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061017d565b604051808215151515815260200191505060405180910390f35b6100ff600480360360208110156100e957600080fd5b8101908080359060200190929190505050610242565b604051808481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390f35b600060016000548154811061016057fe5b906000526020600020906003020160020154905090565b60005481565b6000600160005401600081905550604051806060016040528060005481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152506001600054815481106101cd57fe5b90600052602060002090600302016000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015590505060019050919050565b6001818154811061024f57fe5b90600052602060002090600302016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002015490508356fea265627a7a72315820535138e99fa121d539be21c1016d358175e58d2d8125e0e86541b11a893818aa64736f6c634300050c0032",
-  "sourceMap": "37:619:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:619:0;;;;;;;",
-  "deployedSourceMap": "37:619:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:619:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;559:95;;;:::i;:::-;;;;;;;;;;;;;;;;;;;161:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;232:324;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;232:324:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;200:27;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;200:27:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;559:95;601:4;617:10;628:16;;617:28;;;;;;;;;;;;;;;;;;:33;;;610:40;;559:95;:::o;161:28::-;;;;:::o;232:324::-;282:15;343:1;326:16;;:18;309:16;:35;;;;383:148;;;;;;;;425:16;;383:148;;;;469:10;383:148;;;;;;502:5;383:148;;;354:10;365:16;;354:28;;;;;;;;;;;;;;;;;;:177;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;548:4;541:11;;232:324;;;:::o;200:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "\npragma solidity >=0.4.17 <0.7.0;\n\n\n\ncontract FL_simulation {\n    \n    struct Weights{\n        uint ID;\n        address initiator;\n        uint data;\n    }\n\n    uint public ID_newestweights;\n    \n    Weights[] public allweights;\n\n\n\tfunction updateweights(uint _data) public returns(bool sufficient) {\n        ID_newestweights=ID_newestweights+1;\n        allweights[ID_newestweights]=Weights(\n            {\n                ID:ID_newestweights,\n                initiator:msg.sender,\n                data:_data\n            }\n        );\n        return true;\n\t}\n\n\tfunction getweights() public view returns(uint){\n\t\treturn allweights[ID_newestweights].data;\n\t}\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"ID_newestweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"ID\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"initiator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"data\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_data\",\"type\":\"uint256\"}],\"name\":\"updateweights\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"sufficient\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":\"FL_simulation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":{\"keccak256\":\"0x36c3b9d32fa8b71fa422a38691e4f89071cfa0bdecb1d513c034e64e8b399fa6\",\"urls\":[\"bzz-raw://61de02c87abb62e417068363076eb76e827e217cf12ade54b0a0a3c74a0cc5cc\",\"dweb:/ipfs/QmdoHhRQeEXiTXhQfsjSS1vxBGfRDo3aFHw8NDtUvJh6dz\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060016000819055506102ba806100286000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806306779ab514610051578063187587131461006f5780631922b23d1461008d5780632b81704e146100d1575b600080fd5b610059610137565b6040518082815260200191505060405180910390f35b61007761015f565b6040518082815260200191505060405180910390f35b6100b9600480360360208110156100a357600080fd5b8101908080359060200190929190505050610165565b60405180821515815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061022a565b604051808481526020018373ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390f35b600060016000548154811061014857fe5b906000526020600020906003020160020154905090565b60005481565b6000600160005401600081905550604051806060016040528060005481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152506001600054815481106101b557fe5b90600052602060002090600302016000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015590505060019050919050565b6001818154811061023a57600080fd5b90600052602060002090600302016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002015490508356fea2646970667358221220d5a4b5d9a97ba46b7b594464fd006e72f98909ad5feae9a2b3215d8118e589d864736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806306779ab514610051578063187587131461006f5780631922b23d1461008d5780632b81704e146100d1575b600080fd5b610059610137565b6040518082815260200191505060405180910390f35b61007761015f565b6040518082815260200191505060405180910390f35b6100b9600480360360208110156100a357600080fd5b8101908080359060200190929190505050610165565b60405180821515815260200191505060405180910390f35b6100fd600480360360208110156100e757600080fd5b810190808035906020019092919050505061022a565b604051808481526020018373ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390f35b600060016000548154811061014857fe5b906000526020600020906003020160020154905090565b60005481565b6000600160005401600081905550604051806060016040528060005481526020013373ffffffffffffffffffffffffffffffffffffffff168152602001838152506001600054815481106101b557fe5b90600052602060002090600302016000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015590505060019050919050565b6001818154811061023a57600080fd5b90600052602060002090600302016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806002015490508356fea2646970667358221220d5a4b5d9a97ba46b7b594464fd006e72f98909ad5feae9a2b3215d8118e589d864736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "36:673:0:-:0;;;232:49;;;;;;;;;;273:1;256:16;:18;;;;36:673;;;;;;",
+  "deployedSourceMap": "36:673:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;612:95;;;:::i;:::-;;;;;;;;;;;;;;;;;;;160:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;285:324;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;199:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;612:95;654:4;670:10;681:16;;670:28;;;;;;;;;;;;;;;;;;:33;;;663:40;;612:95;:::o;160:28::-;;;;:::o;285:324::-;335:15;396:1;379:16;;:18;362:16;:35;;;;436:148;;;;;;;;478:16;;436:148;;;;522:10;436:148;;;;;;555:5;436:148;;;407:10;418:16;;407:28;;;;;;;;;;;;;;;;;;:177;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;601:4;594:11;;285:324;;;:::o;199:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "\npragma solidity >=0.7.0 <0.8.0;\n\n\n\ncontract FL_simulation {\n    \n    struct Weights{\n        uint ID;\n        address initiator;\n        uint data;\n    }\n\n    uint public ID_newestweights;\n    \n    Weights[] public allweights;\n    constructor() {\n        ID_newestweights=1;\n    }\n\n\n\tfunction updateweights(uint _data) public returns(bool sufficient) {\n        ID_newestweights=ID_newestweights+1;\n        allweights[ID_newestweights]=Weights(\n            {\n                ID:ID_newestweights,\n                initiator:msg.sender,\n                data:_data\n            }\n        );\n        return true;\n\t}\n\n\tfunction getweights() public view returns(uint){\n\t\treturn allweights[ID_newestweights].data;\n\t}\n}\n",
   "sourcePath": "/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol",
   "ast": {
     "absolutePath": "/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol",
     "exportedSymbols": {
       "FL_simulation": [
-        52
+        60
       ]
     },
-    "id": 53,
+    "id": 61,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -106,24 +106,24 @@
         "literals": [
           "solidity",
           ">=",
-          "0.4",
-          ".17",
-          "<",
           "0.7",
+          ".0",
+          "<",
+          "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "1:32:0"
+        "src": "1:31:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 52,
+        "id": 60,
         "linearizedBaseContracts": [
-          52
+          60
         ],
         "name": "FL_simulation",
         "nodeType": "ContractDefinition",
@@ -135,10 +135,11 @@
               {
                 "constant": false,
                 "id": 3,
+                "mutability": "mutable",
                 "name": "ID",
                 "nodeType": "VariableDeclaration",
                 "scope": 8,
-                "src": "95:7:0",
+                "src": "94:7:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -149,22 +150,22 @@
                   "id": 2,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "95:4:0",
+                  "src": "94:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
                 "id": 5,
+                "mutability": "mutable",
                 "name": "initiator",
                 "nodeType": "VariableDeclaration",
                 "scope": 8,
-                "src": "112:17:0",
+                "src": "111:17:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -175,23 +176,23 @@
                   "id": 4,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "112:7:0",
+                  "src": "111:7:0",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
                     "typeString": "address"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               },
               {
                 "constant": false,
                 "id": 7,
+                "mutability": "mutable",
                 "name": "data",
                 "nodeType": "VariableDeclaration",
                 "scope": 8,
-                "src": "139:9:0",
+                "src": "138:9:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -202,29 +203,30 @@
                   "id": 6,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "139:4:0",
+                  "src": "138:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
                   }
                 },
-                "value": null,
                 "visibility": "internal"
               }
             ],
             "name": "Weights",
             "nodeType": "StructDefinition",
-            "scope": 52,
-            "src": "71:84:0",
+            "scope": 60,
+            "src": "70:84:0",
             "visibility": "public"
           },
           {
             "constant": false,
+            "functionSelector": "18758713",
             "id": 10,
+            "mutability": "mutable",
             "name": "ID_newestweights",
             "nodeType": "VariableDeclaration",
-            "scope": 52,
-            "src": "161:28:0",
+            "scope": 60,
+            "src": "160:28:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -235,22 +237,23 @@
               "id": 9,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "161:4:0",
+              "src": "160:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               }
             },
-            "value": null,
             "visibility": "public"
           },
           {
             "constant": false,
+            "functionSelector": "2b81704e",
             "id": 13,
+            "mutability": "mutable",
             "name": "allweights",
             "nodeType": "VariableDeclaration",
-            "scope": 52,
-            "src": "200:27:0",
+            "scope": 60,
+            "src": "199:27:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -259,51 +262,46 @@
             },
             "typeName": {
               "baseType": {
-                "contractScope": null,
                 "id": 11,
                 "name": "Weights",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 8,
-                "src": "200:7:0",
+                "src": "199:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_Weights_$8_storage_ptr",
                   "typeString": "struct FL_simulation.Weights"
                 }
               },
               "id": 12,
-              "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "200:9:0",
+              "src": "199:9:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage_ptr",
                 "typeString": "struct FL_simulation.Weights[]"
               }
             },
-            "value": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 39,
+              "id": 20,
               "nodeType": "Block",
-              "src": "299:257:0",
+              "src": "246:35:0",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
-                    "id": 24,
+                    "id": 18,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 20,
+                      "id": 16,
                       "name": "ID_newestweights",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 10,
-                      "src": "309:16:0",
+                      "src": "256:16:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -312,24 +310,101 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 17,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "273:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "256:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 19,
+                  "nodeType": "ExpressionStatement",
+                  "src": "256:18:0"
+                }
+              ]
+            },
+            "id": 21,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "243:2:0"
+            },
+            "returnParameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "246:0:0"
+            },
+            "scope": 60,
+            "src": "232:49:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "352:257:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 28,
+                      "name": "ID_newestweights",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "362:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
                       "commonType": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 23,
+                      "id": 31,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 21,
+                        "id": 29,
                         "name": "ID_newestweights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "326:16:0",
+                        "src": "379:16:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -338,71 +413,65 @@
                       "nodeType": "BinaryOperation",
                       "operator": "+",
                       "rightExpression": {
-                        "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 22,
+                        "id": 30,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "343:1:0",
-                        "subdenomination": null,
+                        "src": "396:1:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1_by_1",
                           "typeString": "int_const 1"
                         },
                         "value": "1"
                       },
-                      "src": "326:18:0",
+                      "src": "379:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "309:35:0",
+                    "src": "362:35:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 25,
+                  "id": 33,
                   "nodeType": "ExpressionStatement",
-                  "src": "309:35:0"
+                  "src": "362:35:0"
                 },
                 {
                   "expression": {
-                    "argumentTypes": null,
-                    "id": 35,
+                    "id": 43,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "argumentTypes": null,
                       "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 26,
+                        "id": 34,
                         "name": "allweights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 13,
-                        "src": "354:10:0",
+                        "src": "407:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage",
                           "typeString": "struct FL_simulation.Weights storage ref[] storage ref"
                         }
                       },
-                      "id": 28,
+                      "id": 36,
                       "indexExpression": {
-                        "argumentTypes": null,
-                        "id": 27,
+                        "id": 35,
                         "name": "ID_newestweights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "365:16:0",
+                        "src": "418:16:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -413,7 +482,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "354:28:0",
+                      "src": "407:28:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Weights_$8_storage",
                         "typeString": "struct FL_simulation.Weights storage ref"
@@ -422,58 +491,52 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "argumentTypes": null,
                       "arguments": [
                         {
-                          "argumentTypes": null,
-                          "id": 30,
+                          "id": 38,
                           "name": "ID_newestweights",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 10,
-                          "src": "425:16:0",
+                          "src": "478:16:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         {
-                          "argumentTypes": null,
                           "expression": {
-                            "argumentTypes": null,
-                            "id": 31,
+                            "id": 39,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 104,
-                            "src": "469:3:0",
+                            "referencedDeclaration": 4294967281,
+                            "src": "522:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 32,
+                          "id": 40,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "469:10:0",
+                          "src": "522:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
                           }
                         },
                         {
-                          "argumentTypes": null,
-                          "id": 33,
+                          "id": 41,
                           "name": "_data",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 15,
-                          "src": "502:5:0",
+                          "referencedDeclaration": 23,
+                          "src": "555:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -495,18 +558,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 29,
+                        "id": 37,
                         "name": "Weights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 8,
-                        "src": "383:7:0",
+                        "src": "436:7:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_Weights_$8_storage_ptr_$",
                           "typeString": "type(struct FL_simulation.Weights storage pointer)"
                         }
                       },
-                      "id": 34,
+                      "id": 42,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -518,66 +581,66 @@
                         "data"
                       ],
                       "nodeType": "FunctionCall",
-                      "src": "383:148:0",
+                      "src": "436:148:0",
+                      "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Weights_$8_memory",
+                        "typeIdentifier": "t_struct$_Weights_$8_memory_ptr",
                         "typeString": "struct FL_simulation.Weights memory"
                       }
                     },
-                    "src": "354:177:0",
+                    "src": "407:177:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Weights_$8_storage",
                       "typeString": "struct FL_simulation.Weights storage ref"
                     }
                   },
-                  "id": 36,
+                  "id": 44,
                   "nodeType": "ExpressionStatement",
-                  "src": "354:177:0"
+                  "src": "407:177:0"
                 },
                 {
                   "expression": {
-                    "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 37,
+                    "id": 45,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "548:4:0",
-                    "subdenomination": null,
+                    "src": "601:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 19,
-                  "id": 38,
+                  "functionReturnParameters": 27,
+                  "id": 46,
                   "nodeType": "Return",
-                  "src": "541:11:0"
+                  "src": "594:11:0"
                 }
               ]
             },
-            "documentation": null,
-            "id": 40,
+            "functionSelector": "1922b23d",
+            "id": 48,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateweights",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 16,
+              "id": 24,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 15,
+                  "id": 23,
+                  "mutability": "mutable",
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40,
-                  "src": "255:10:0",
+                  "scope": 48,
+                  "src": "308:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -585,32 +648,32 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14,
+                    "id": 22,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "255:4:0",
+                    "src": "308:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "254:12:0"
+              "src": "307:12:0"
             },
             "returnParameters": {
-              "id": 19,
+              "id": 27,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 18,
+                  "id": 26,
+                  "mutability": "mutable",
                   "name": "sufficient",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40,
-                  "src": "282:15:0",
+                  "scope": 48,
+                  "src": "335:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -618,60 +681,55 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 17,
+                    "id": 25,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "282:4:0",
+                    "src": "335:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "281:17:0"
+              "src": "334:17:0"
             },
-            "scope": 52,
-            "src": "232:324:0",
+            "scope": 60,
+            "src": "285:324:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 50,
+              "id": 58,
               "nodeType": "Block",
-              "src": "606:48:0",
+              "src": "659:48:0",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
                     "expression": {
-                      "argumentTypes": null,
                       "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 45,
+                        "id": 53,
                         "name": "allweights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 13,
-                        "src": "617:10:0",
+                        "src": "670:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage",
                           "typeString": "struct FL_simulation.Weights storage ref[] storage ref"
                         }
                       },
-                      "id": 47,
+                      "id": 55,
                       "indexExpression": {
-                        "argumentTypes": null,
-                        "id": 46,
+                        "id": 54,
                         "name": "ID_newestweights",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 10,
-                        "src": "628:16:0",
+                        "src": "681:16:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -682,13 +740,13 @@
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "617:28:0",
+                      "src": "670:28:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Weights_$8_storage",
                         "typeString": "struct FL_simulation.Weights storage ref"
                       }
                     },
-                    "id": 48,
+                    "id": 56,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -696,43 +754,44 @@
                     "memberName": "data",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 7,
-                    "src": "617:33:0",
+                    "src": "670:33:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 44,
-                  "id": 49,
+                  "functionReturnParameters": 52,
+                  "id": 57,
                   "nodeType": "Return",
-                  "src": "610:40:0"
+                  "src": "663:40:0"
                 }
               ]
             },
-            "documentation": null,
-            "id": 51,
+            "functionSelector": "06779ab5",
+            "id": 59,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getweights",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 41,
+              "id": 49,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "578:2:0"
+              "src": "631:2:0"
             },
             "returnParameters": {
-              "id": 44,
+              "id": 52,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 43,
+                  "id": 51,
+                  "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51,
-                  "src": "601:4:0",
+                  "scope": 59,
+                  "src": "654:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -740,714 +799,850 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 42,
+                    "id": 50,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "601:4:0",
+                    "src": "654:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "600:6:0"
+              "src": "653:6:0"
             },
-            "scope": 52,
-            "src": "559:95:0",
+            "scope": 60,
+            "src": "612:95:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 53,
-        "src": "37:619:0"
+        "scope": 61,
+        "src": "36:673:0"
       }
     ],
-    "src": "1:656:0"
+    "src": "1:709:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol",
-    "exportedSymbols": {
-      "FL_simulation": [
-        52
-      ]
+    "attributes": {
+      "absolutePath": "/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol",
+      "exportedSymbols": {
+        "FL_simulation": [
+          60
+        ]
+      }
     },
-    "id": 53,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.7",
+            ".0",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
         "id": 1,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.4",
-          ".17",
-          "<",
-          "0.7",
-          ".0"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "1:32:0"
+        "name": "PragmaDirective",
+        "src": "1:31:0"
       },
       {
-        "baseContracts": [],
-        "contractDependencies": [],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": true,
-        "id": 52,
-        "linearizedBaseContracts": [
-          52
-        ],
-        "name": "FL_simulation",
-        "nodeType": "ContractDefinition",
-        "nodes": [
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            60
+          ],
+          "name": "FL_simulation",
+          "scope": 61
+        },
+        "children": [
           {
-            "canonicalName": "FL_simulation.Weights",
-            "id": 8,
-            "members": [
+            "attributes": {
+              "canonicalName": "FL_simulation.Weights",
+              "name": "Weights",
+              "scope": 60,
+              "visibility": "public"
+            },
+            "children": [
               {
-                "constant": false,
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "ID",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "94:4:0"
+                  }
+                ],
                 "id": 3,
-                "name": "ID",
-                "nodeType": "VariableDeclaration",
-                "scope": 8,
-                "src": "95:7:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                },
-                "typeName": {
-                  "id": 2,
-                  "name": "uint",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "95:4:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
+                "name": "VariableDeclaration",
+                "src": "94:7:0"
               },
               {
-                "constant": false,
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "initiator",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "111:7:0"
+                  }
+                ],
                 "id": 5,
-                "name": "initiator",
-                "nodeType": "VariableDeclaration",
-                "scope": 8,
-                "src": "112:17:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_address",
-                  "typeString": "address"
-                },
-                "typeName": {
-                  "id": 4,
-                  "name": "address",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "112:7:0",
-                  "stateMutability": "nonpayable",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
+                "name": "VariableDeclaration",
+                "src": "111:17:0"
               },
               {
-                "constant": false,
-                "id": 7,
-                "name": "data",
-                "nodeType": "VariableDeclaration",
-                "scope": 8,
-                "src": "139:9:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "scope": 8,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
                 },
-                "typeName": {
-                  "id": 6,
-                  "name": "uint",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "139:4:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "138:4:0"
                   }
-                },
-                "value": null,
-                "visibility": "internal"
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "138:9:0"
               }
             ],
-            "name": "Weights",
-            "nodeType": "StructDefinition",
-            "scope": 52,
-            "src": "71:84:0",
-            "visibility": "public"
+            "id": 8,
+            "name": "StructDefinition",
+            "src": "70:84:0"
           },
           {
-            "constant": false,
-            "id": 10,
-            "name": "ID_newestweights",
-            "nodeType": "VariableDeclaration",
-            "scope": 52,
-            "src": "161:28:0",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_uint256",
-              "typeString": "uint256"
+            "attributes": {
+              "constant": false,
+              "functionSelector": "18758713",
+              "mutability": "mutable",
+              "name": "ID_newestweights",
+              "scope": 60,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
             },
-            "typeName": {
-              "id": 9,
-              "name": "uint",
-              "nodeType": "ElementaryTypeName",
-              "src": "161:4:0",
-              "typeDescriptions": {
-                "typeIdentifier": "t_uint256",
-                "typeString": "uint256"
-              }
-            },
-            "value": null,
-            "visibility": "public"
-          },
-          {
-            "constant": false,
-            "id": 13,
-            "name": "allweights",
-            "nodeType": "VariableDeclaration",
-            "scope": 52,
-            "src": "200:27:0",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage",
-              "typeString": "struct FL_simulation.Weights[]"
-            },
-            "typeName": {
-              "baseType": {
-                "contractScope": null,
-                "id": 11,
-                "name": "Weights",
-                "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 8,
-                "src": "200:7:0",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Weights_$8_storage_ptr",
-                  "typeString": "struct FL_simulation.Weights"
-                }
-              },
-              "id": 12,
-              "length": null,
-              "nodeType": "ArrayTypeName",
-              "src": "200:9:0",
-              "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage_ptr",
-                "typeString": "struct FL_simulation.Weights[]"
-              }
-            },
-            "value": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 39,
-              "nodeType": "Block",
-              "src": "299:257:0",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 24,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 20,
-                      "name": "ID_newestweights",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "309:16:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "commonType": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      },
-                      "id": 23,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftExpression": {
-                        "argumentTypes": null,
-                        "id": 21,
-                        "name": "ID_newestweights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "326:16:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "nodeType": "BinaryOperation",
-                      "operator": "+",
-                      "rightExpression": {
-                        "argumentTypes": null,
-                        "hexValue": "31",
-                        "id": 22,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "343:1:0",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_1_by_1",
-                          "typeString": "int_const 1"
-                        },
-                        "value": "1"
-                      },
-                      "src": "326:18:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "309:35:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 25,
-                  "nodeType": "ExpressionStatement",
-                  "src": "309:35:0"
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
                 },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 35,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 26,
-                        "name": "allweights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 13,
-                        "src": "354:10:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage",
-                          "typeString": "struct FL_simulation.Weights storage ref[] storage ref"
-                        }
-                      },
-                      "id": 28,
-                      "indexExpression": {
-                        "argumentTypes": null,
-                        "id": 27,
-                        "name": "ID_newestweights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "365:16:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "nodeType": "IndexAccess",
-                      "src": "354:28:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Weights_$8_storage",
-                        "typeString": "struct FL_simulation.Weights storage ref"
-                      }
+                "id": 9,
+                "name": "ElementaryTypeName",
+                "src": "160:4:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "160:28:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "2b81704e",
+              "mutability": "mutable",
+              "name": "allweights",
+              "scope": 60,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct FL_simulation.Weights[]",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "struct FL_simulation.Weights[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "Weights",
+                      "referencedDeclaration": 8,
+                      "type": "struct FL_simulation.Weights"
                     },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 30,
-                          "name": "ID_newestweights",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 10,
-                          "src": "425:16:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 31,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 104,
-                            "src": "469:3:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 32,
+                    "id": 11,
+                    "name": "UserDefinedTypeName",
+                    "src": "199:7:0"
+                  }
+                ],
+                "id": 12,
+                "name": "ArrayTypeName",
+                "src": "199:9:0"
+              }
+            ],
+            "id": 13,
+            "name": "VariableDeclaration",
+            "src": "199:27:0"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 60,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14,
+                "name": "ParameterList",
+                "src": "243:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "246:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "sender",
-                          "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "469:10:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address_payable",
-                            "typeString": "address payable"
-                          }
+                          "operator": "=",
+                          "type": "uint256"
                         },
-                        {
-                          "argumentTypes": null,
-                          "id": 33,
-                          "name": "_data",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 15,
-                          "src": "502:5:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
+                        "children": [
                           {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "uint256",
+                              "value": "ID_newestweights"
+                            },
+                            "id": 16,
+                            "name": "Identifier",
+                            "src": "256:16:0"
                           },
                           {
-                            "typeIdentifier": "t_address_payable",
-                            "typeString": "address payable"
-                          },
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
+                            "attributes": {
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 17,
+                            "name": "Literal",
+                            "src": "273:1:0"
                           }
                         ],
-                        "id": 29,
-                        "name": "Weights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 8,
-                        "src": "383:7:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Weights_$8_storage_ptr_$",
-                          "typeString": "type(struct FL_simulation.Weights storage pointer)"
-                        }
-                      },
-                      "id": 34,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [
-                        "ID",
-                        "initiator",
-                        "data"
-                      ],
-                      "nodeType": "FunctionCall",
-                      "src": "383:148:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Weights_$8_memory",
-                        "typeString": "struct FL_simulation.Weights memory"
+                        "id": 18,
+                        "name": "Assignment",
+                        "src": "256:18:0"
                       }
-                    },
-                    "src": "354:177:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Weights_$8_storage",
-                      "typeString": "struct FL_simulation.Weights storage ref"
-                    }
-                  },
-                  "id": 36,
-                  "nodeType": "ExpressionStatement",
-                  "src": "354:177:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "hexValue": "74727565",
-                    "id": 37,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": true,
-                    "kind": "bool",
-                    "lValueRequested": false,
-                    "nodeType": "Literal",
-                    "src": "548:4:0",
-                    "subdenomination": null,
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    },
-                    "value": "true"
-                  },
-                  "functionReturnParameters": 19,
-                  "id": 38,
-                  "nodeType": "Return",
-                  "src": "541:11:0"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 40,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "updateweights",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 16,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 15,
-                  "name": "_data",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 40,
-                  "src": "255:10:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 14,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "255:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "254:12:0"
-            },
-            "returnParameters": {
-              "id": 19,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 18,
-                  "name": "sufficient",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 40,
-                  "src": "282:15:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bool",
-                    "typeString": "bool"
-                  },
-                  "typeName": {
-                    "id": 17,
-                    "name": "bool",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "282:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "281:17:0"
-            },
-            "scope": 52,
-            "src": "232:324:0",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
+                    ],
+                    "id": 19,
+                    "name": "ExpressionStatement",
+                    "src": "256:18:0"
+                  }
+                ],
+                "id": 20,
+                "name": "Block",
+                "src": "246:35:0"
+              }
+            ],
+            "id": 21,
+            "name": "FunctionDefinition",
+            "src": "232:49:0"
           },
           {
-            "body": {
-              "id": 50,
-              "nodeType": "Block",
-              "src": "606:48:0",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "expression": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 45,
-                        "name": "allweights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 13,
-                        "src": "617:10:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Weights_$8_storage_$dyn_storage",
-                          "typeString": "struct FL_simulation.Weights storage ref[] storage ref"
-                        }
-                      },
-                      "id": 47,
-                      "indexExpression": {
-                        "argumentTypes": null,
-                        "id": 46,
-                        "name": "ID_newestweights",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 10,
-                        "src": "628:16:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "IndexAccess",
-                      "src": "617:28:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Weights_$8_storage",
-                        "typeString": "struct FL_simulation.Weights storage ref"
-                      }
-                    },
-                    "id": 48,
-                    "isConstant": false,
-                    "isLValue": true,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "memberName": "data",
-                    "nodeType": "MemberAccess",
-                    "referencedDeclaration": 7,
-                    "src": "617:33:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "functionReturnParameters": 44,
-                  "id": 49,
-                  "nodeType": "Return",
-                  "src": "610:40:0"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 51,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getweights",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 41,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "578:2:0"
-            },
-            "returnParameters": {
-              "id": 44,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 43,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 51,
-                  "src": "601:4:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 42,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "601:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
+            "attributes": {
+              "functionSelector": "1922b23d",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
               ],
-              "src": "600:6:0"
+              "name": "updateweights",
+              "scope": 60,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
             },
-            "scope": 52,
-            "src": "559:95:0",
-            "stateMutability": "view",
-            "superFunction": null,
-            "visibility": "public"
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_data",
+                      "scope": 48,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "308:4:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "308:10:0"
+                  }
+                ],
+                "id": 24,
+                "name": "ParameterList",
+                "src": "307:12:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "sufficient",
+                      "scope": 48,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 25,
+                        "name": "ElementaryTypeName",
+                        "src": "335:4:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "VariableDeclaration",
+                    "src": "335:15:0"
+                  }
+                ],
+                "id": 27,
+                "name": "ParameterList",
+                "src": "334:17:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 10,
+                              "type": "uint256",
+                              "value": "ID_newestweights"
+                            },
+                            "id": 28,
+                            "name": "Identifier",
+                            "src": "362:16:0"
+                          },
+                          {
+                            "attributes": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "uint256",
+                                  "value": "ID_newestweights"
+                                },
+                                "id": 29,
+                                "name": "Identifier",
+                                "src": "379:16:0"
+                              },
+                              {
+                                "attributes": {
+                                  "hexvalue": "31",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "token": "number",
+                                  "type": "int_const 1",
+                                  "value": "1"
+                                },
+                                "id": 30,
+                                "name": "Literal",
+                                "src": "396:1:0"
+                              }
+                            ],
+                            "id": 31,
+                            "name": "BinaryOperation",
+                            "src": "379:18:0"
+                          }
+                        ],
+                        "id": 32,
+                        "name": "Assignment",
+                        "src": "362:35:0"
+                      }
+                    ],
+                    "id": 33,
+                    "name": "ExpressionStatement",
+                    "src": "362:35:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct FL_simulation.Weights storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct FL_simulation.Weights storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13,
+                                  "type": "struct FL_simulation.Weights storage ref[] storage ref",
+                                  "value": "allweights"
+                                },
+                                "id": 34,
+                                "name": "Identifier",
+                                "src": "407:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "uint256",
+                                  "value": "ID_newestweights"
+                                },
+                                "id": 35,
+                                "name": "Identifier",
+                                "src": "418:16:0"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "IndexAccess",
+                            "src": "407:28:0"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                "ID",
+                                "initiator",
+                                "data"
+                              ],
+                              "tryCall": false,
+                              "type": "struct FL_simulation.Weights memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8,
+                                  "type": "type(struct FL_simulation.Weights storage pointer)",
+                                  "value": "Weights"
+                                },
+                                "id": 37,
+                                "name": "Identifier",
+                                "src": "436:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "uint256",
+                                  "value": "ID_newestweights"
+                                },
+                                "id": 38,
+                                "name": "Identifier",
+                                "src": "478:16:0"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967281,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 39,
+                                    "name": "Identifier",
+                                    "src": "522:3:0"
+                                  }
+                                ],
+                                "id": 40,
+                                "name": "MemberAccess",
+                                "src": "522:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 23,
+                                  "type": "uint256",
+                                  "value": "_data"
+                                },
+                                "id": 41,
+                                "name": "Identifier",
+                                "src": "555:5:0"
+                              }
+                            ],
+                            "id": 42,
+                            "name": "FunctionCall",
+                            "src": "436:148:0"
+                          }
+                        ],
+                        "id": 43,
+                        "name": "Assignment",
+                        "src": "407:177:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "ExpressionStatement",
+                    "src": "407:177:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 27
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 45,
+                        "name": "Literal",
+                        "src": "601:4:0"
+                      }
+                    ],
+                    "id": 46,
+                    "name": "Return",
+                    "src": "594:11:0"
+                  }
+                ],
+                "id": 47,
+                "name": "Block",
+                "src": "352:257:0"
+              }
+            ],
+            "id": 48,
+            "name": "FunctionDefinition",
+            "src": "285:324:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "06779ab5",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getweights",
+              "scope": 60,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 49,
+                "name": "ParameterList",
+                "src": "631:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 59,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 50,
+                        "name": "ElementaryTypeName",
+                        "src": "654:4:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "VariableDeclaration",
+                    "src": "654:4:0"
+                  }
+                ],
+                "id": 52,
+                "name": "ParameterList",
+                "src": "653:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 52
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "data",
+                          "referencedDeclaration": 7,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct FL_simulation.Weights storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 13,
+                                  "type": "struct FL_simulation.Weights storage ref[] storage ref",
+                                  "value": "allweights"
+                                },
+                                "id": 53,
+                                "name": "Identifier",
+                                "src": "670:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "uint256",
+                                  "value": "ID_newestweights"
+                                },
+                                "id": 54,
+                                "name": "Identifier",
+                                "src": "681:16:0"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "IndexAccess",
+                            "src": "670:28:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "MemberAccess",
+                        "src": "670:33:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "Return",
+                    "src": "663:40:0"
+                  }
+                ],
+                "id": 58,
+                "name": "Block",
+                "src": "659:48:0"
+              }
+            ],
+            "id": 59,
+            "name": "FunctionDefinition",
+            "src": "612:95:0"
           }
         ],
-        "scope": 53,
-        "src": "37:619:0"
+        "id": 60,
+        "name": "ContractDefinition",
+        "src": "36:673:0"
       }
     ],
-    "src": "1:656:0"
+    "id": 61,
+    "name": "SourceUnit",
+    "src": "1:709:0"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
   },
   "networks": {
     "1615113447889": {
@@ -1470,12 +1665,15 @@
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-07T11:21:51.143Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-03-07T12:16:48.285Z",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }
