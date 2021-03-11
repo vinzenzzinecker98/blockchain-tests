@@ -17,7 +17,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -46,7 +47,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -78,7 +80,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"ID_newestweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"allweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"ID\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"initiator\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"data\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getweights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_data\",\"type\":\"uint256\"}],\"name\":\"updateweights\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"sufficient\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":\"FL_simulation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/debian/ethereum-tests/truffleproject/contracts/FL_simulation.sol\":{\"keccak256\":\"0x36c3b9d32fa8b71fa422a38691e4f89071cfa0bdecb1d513c034e64e8b399fa6\",\"urls\":[\"bzz-raw://61de02c87abb62e417068363076eb76e827e217cf12ade54b0a0a3c74a0cc5cc\",\"dweb:/ipfs/QmdoHhRQeEXiTXhQfsjSS1vxBGfRDo3aFHw8NDtUvJh6dz\"]}},\"version\":1}",
@@ -1662,10 +1665,17 @@
       "links": {},
       "address": "0x5DC675fF7F3bCb15f9C2C754d61119778127f405",
       "transactionHash": "0x51f2044240c5c3d146b0e6a3abd59282d3b21ee137f662a9c87dd1fdbf50cba1"
+    },
+    "1615486598670": {
+      "events": {},
+      "links": {},
+      "address": "0x3C2b38eddc76e5AA9b57D9e6B4004279cf3A8c2d",
+      "transactionHash": "0x67f14d77e9ac0e5bbb778d1b2bbfcc0440ea500bbf8e077611925cbb7b393387"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-07T12:16:48.285Z",
+  "updatedAt": "2021-03-11T18:30:15.720Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
