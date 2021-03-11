@@ -3,13 +3,13 @@ pragma solidity >=0.7.0 <0.8.0;
 
 
 contract FL_simple{
-    uint public data;
+    string data;
 
-    function update(uint _data) public{
+    function update(string memory _data) public{
         data=_data;
     }
 
-    function retrieve() public view returns(uint d) {
+    function retrieve() public view returns(string memory d) {
         return data;
     }
 }
