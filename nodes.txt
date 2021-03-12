@@ -1,0 +1,61 @@
+Node 1
+0x7ceBe734fFe4921FbEcEec1fC5fEb4CbDf211D6B
+/home/ubuntu/workspace/node01/keystore/UTC--2021-03-12T12-15-11.182910806Z--7cebe734ffe4921fbeceec1fc5feb4cbdf211d6b
+PW:....1301
+
+
+Node 2
+0x33d9bC9700a8AB063cdFa1d350d2d1eAbA2DB7f4
+/home/ubuntu/workspace/node02/keystore/UTC--2021-03-12T12-16-11.374469256Z--33d9bc9700a8ab063cdfa1d350d2d1eaba2db7f4
+PW:....1302
+
+
+
+
+SETUP Script for Ubuntu 18.04
+#install go-ethereum
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get updated
+sudo apt-get install ethereum
+
+#install truffle
+sudo apt install nodejs
+sudo apt install npm
+sudo npm i -g --unsafe-perm=true --allow-root truffle
+
+
+mkdir node01 node02
+
+#make accounts
+geth --datadir "/home/ubuntu/workspace/node01/" account new
+geth --datadir "/home/ubuntu/workspace/node02/" account new
+
+
+#start here after reset (delete geth files)
+#initialize nodes
+geth --datadir "/home/ubuntu/workspace/node01/" init /home/ubuntu/workspace/genesis.json
+geth --datadir "/home/ubuntu/workspace/node02/" init /home/ubuntu/workspace/genesis.json
+
+#startup bootstrap node (inside tmux)
+geth --datadir "/home/ubuntu/workspace/node01/" --networkid 15 --nat extip:193.196.38.45 --netrestrict 193.196.36.0/22 --rpc --rpcport 30301 --rpcaddr 193.196.38.45 --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner" --allow-insecure-unlock
+
+
+#geth --datadir "/home/ubuntu/workspace/node01/" --networkid 15 --nat extip:193.196.38.45 --netrestrict 193.196.36.0/22
+
+#get network code
+geth attach /home/ubuntu/workspace/node01/geth.ipc --exec admin.nodeInfo.enr
+#"enr:-J24QJKIr7sgFVenPqv2UO8oK0E4m_otmNOzeP0Xrl-mhMzpepJ00KsqvS1O-u25YnHDs4Qv9D1dM1FZbCl-8P6IKJUBg2V0aMfGhHR1A8eAgmlkgnY0gmlwhMHEJi2Jc2VjcDI1NmsxoQPp345ZtPcRjbANgI_cDzbxCDmc8P7WVZ_kBM3oWKGNaYRzbmFwwIN0Y3CCdl-DdWRwgnZf"
+
+
+#start node2 (inside tmux)
+geth --datadir "/home/ubuntu/workspace/node02/" --networkid 15 --port 30305 --bootnodes "enr:-J24QJ3JqkOL3Cw_zyJB3nc1JLPK_Ua0jaqG8eBdWlasvYxcayf-ALODzwF8a4KcL3GIjUjgHZ4D68o1jO-8tGDD16kBg2V0aMfGhBKAVMaAgmlkgnY0gmlwhMHEJi2Jc2VjcDI1NmsxoQKArwiL117MB2ExY2cMgo4pNWDYhfm9o0tAN9fQ0JMabYRzbmFwwIN0Y3CCdl-DdWRwgnZf"
+
+#check whether it worked
+geth attach /home/ubuntu/workspace/node02/geth.ipc --exec admin.peers
+
+
+#start node 3 as signer
+geth --datadir "/home/ubuntu/workspace/node03/" --networkid 15 --port 30305 --bootnodes "enr:-J24QJKIr7sgFVenPqv2UO8oK0E4m_otmNOzeP0Xrl-mhMzpepJ00KsqvS1O-u25YnHDs4Qv9D1dM1FZbCl --unlock 0x86Ae58BC2e18a10BC9B7D53C4F5eD7E7111ac037 --mine
+
+clique.getSnapshot()
+personal.unlockAccount(eth.accounts[0], "Tossfamoglfm.1301", 0)
