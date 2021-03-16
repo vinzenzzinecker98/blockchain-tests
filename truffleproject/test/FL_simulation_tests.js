@@ -4,8 +4,8 @@ const CryptoJS = require("crypto-js");
 
 
 
-const rounds = 1;
-const numberaccounts = 1;
+const rounds = 4;
+const numberaccounts = 2;
 
 var realanswer="seed"
 for (i = 0; i < rounds; i++) {
