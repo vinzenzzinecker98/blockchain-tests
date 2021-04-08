@@ -48,4 +48,5 @@ Inside the tmux session of the corresponding node the minig process can be seen.
 
 ## truffle tests
 Make sure the network configuration in truffle-config.js is correct. The network configuration can be inspected in the JS console by running `admin.nodeInfo` Then simply run `truffle migrate` to deploy the smart contracts and then `truffle test` to run the tests.
+Important: all accounts that are used to create transactions have to be unlocked using `personal.unlockAccount` like done for node 1.
 
